@@ -1,0 +1,37 @@
+//check if git is installed
+git version
+
+//configure user's name and email in global config
+git config --global user.name "Jyoti Rathi" 
+git config --global user.email "jyotirathi79@gmail.com"
+
+//clone a repo
+git clone https://github.com/jyotirathi79/snippets.git
+
+//status
+git status
+=> tells which branch i am on
+=> tells that branch on github is up to date with the same branch on remote repository
+=> tells if working directory is clean or not
+=> tells if there are any changes between 
+   - working directory
+   - staging area
+   - local repo
+   - remote repo
+   
+//add a new file
+// a- create a new text file
+echo "My new test file" >> start.txt
+//see that this file is untracked
+git status
+//c - add the file to the staging area
+git add start.txt
+//d- what is there in staging area
+git status
+//e - commit file to local repo
+git commit -m "Adding file"
+//f - see that working directory is clean and a new file is in local repo
+git status
+//notice until this stage the file is not there in the remote repo even if you go and check it
+//g - push to master, provide username and password when requested for it.
+git push origin master
