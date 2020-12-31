@@ -35,3 +35,49 @@ git status
 //notice until this stage the file is not there in the remote repo even if you go and check it
 //g - push to master, provide username and password when requested for it.
 git push origin master
+
+//on mac install textmate2 by going to the url https://macromates.com
+//when it gets downloaded - click on it compressed file and decompress it
+//when icon comes drag it into applications folder
+//quit textmate2 and launch from terminal - this should open the app
+mate 
+
+
+//associate git with textmate2
+git config --global core.editor "mate -w"
+
+//see .gitconfig file in textmate2 or default editor for git
+git config --global -e
+
+//quit textmate2 - command+q
+
+//config file for textmate2 is in user's home directory and is called .tm_properties
+
+//navigate to home dir then
+pwd
+output - /Users/jyotirathi
+
+//open textmate2 config file (.tm_properties) in textmate2
+mate .tm_properties
+
+//put below contents into .tm_properties file and save and exit.
+#general settings
+fontName	= "Menlo"
+fontSize	= 24
+
+//on windows - install git for windows and then install notepad++ and then integrate gitbash with notepad++
+//on user's home directory
+pwd
+//output - /c/Users
+
+notepad++ .bash_profile
+
+//on the .bash_profile file add the below contents
+alias npp='notepad++.exe -multiInst -nosession'
+
+//save the file, exit and relaunch gitbash
+npp
+
+//configure settings
+
+git config --global core.editor 'notepad++.exe -multiInst -nosession'
